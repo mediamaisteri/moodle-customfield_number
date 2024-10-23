@@ -1,0 +1,11 @@
+{
+    "name": "mediamaisteri/moodle-customfield_number",
+    "type": "moodle-customfield",
+    "require": {
+        "composer/installers": "~1.0",
+        "moodle/moodle": ">=4.1.0"
+    },
+    "extra": {
+        "installer-name": "number"
+    }
+}
