@@ -48,7 +48,7 @@ class data_controller extends \core_customfield\data_controller {
         $config = $field->get('configdata');
         $elementname = $this->get_form_element_name();
 
-        $mform->addElement('number', $elementname, $this->get_field()->get_formatted_name(), ['defaultunit' => $config['defaultunit'] ?? HOURSECS]);
+        $mform->addElement('float', $elementname, $this->get_field()->get_formatted_name());
 
         $mform->setDefault($elementname, $field->get_configdata_property('default'));
 
@@ -63,7 +63,7 @@ class data_controller extends \core_customfield\data_controller {
      * @return mixed
      */
     public function get_default_value() {
-        return 0;
+        return '';
     }
 
     /**
@@ -78,6 +78,6 @@ class data_controller extends \core_customfield\data_controller {
             return null;
         }
 
-        return format_time($value);
+        return $value;
     }
 }
